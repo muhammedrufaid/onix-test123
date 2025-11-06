@@ -11,7 +11,7 @@ export default function Companies() {
         'Quality Assurance',
         'Project Planning'
       ],
-      logo: '/images/onix-engineering-logo.png' // Add your logo path here
+      logo: '/images/onix-engineering-logo.png'
     },
     {
       name: 'ONIX PRIME',
@@ -24,7 +24,7 @@ export default function Companies() {
         'Business Advisory',
         'Compliance Management'
       ],
-      logo: '/images/onix-prime-logo.png' // Add your logo path here
+      logo: '/images/onix-prime-logo.png'
     },
     {
       name: 'ONIX DESIGN STUDIO',
@@ -37,7 +37,7 @@ export default function Companies() {
         '3D Visualization',
         'Design Consultation'
       ],
-      logo: '/images/onix-design-studio-logo.png' // Add your logo path here
+      logo: '/images/onix-design-studio-logo.png'
     },
     {
       name: 'ONIX PLUS',
@@ -50,7 +50,7 @@ export default function Companies() {
         'Project Delivery',
         'Site Coordination'
       ],
-      logo: '/images/onix-plus-logo.png' // Add your logo path here
+      logo: '/images/onix-plus-logo.png'
     },
     {
       name: 'CRIMSON',
@@ -63,13 +63,14 @@ export default function Companies() {
         'Quality Control',
         'Project Delivery'
       ],
-      logo: '/images/crimson-logo.png' // Add your logo path here
+      logo: '/images/crimson-logo.png'
     }
   ]
 
   return (
     <>
-    <section id="companies" className="py-12 sm:py-20">
+    {/* Companies Section */}
+    <section id="companies" className="py-12 sm:py-20 bg-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-12 sm:mb-20">
@@ -95,7 +96,7 @@ export default function Companies() {
             >
               {/* Company Header */}
               <div className="text-center mb-4 sm:mb-6">
-                <div className="w-20 h-20 sm:w-24 sm:h-24 bg-white rounded-xl flex items-center justify-center mx-auto mb-3 sm:mb-4 shadow-lg group-hover:scale-110 transition-transform duration-300 p-2">
+                <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-xl flex items-center justify-center mx-auto mb-3 sm:mb-4 shadow-lg group-hover:scale-110 transition-transform duration-300 p-2">
                   <img 
                     src={company.logo} 
                     alt={`${company.name} Logo`}
@@ -139,8 +140,6 @@ export default function Companies() {
 
       </div>
     </section>
-
-
     </>
   )
 }

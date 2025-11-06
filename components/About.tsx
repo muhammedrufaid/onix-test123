@@ -56,23 +56,24 @@ export default function About() {
     <>
       {/* Who We Are Section */}
       <section id="about" className="py-12 sm:py-24 relative overflow-hidden min-h-screen flex flex-col justify-start">
-        {/* Planet Background - Positioned much lower */}
-        <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-full h-1/2 flex items-end justify-center">
-          <div className="relative w-full h-full max-w-7xl max-h-7xl">
-            <img 
-              src="/images/planet_06f7a40c8b.webp" 
-              alt="Global Network - ONIX Group Worldwide Presence" 
-              className="w-full h-full object-contain opacity-30"
-            />
-          </div>
+        {/* Video Background for Who We Are Section */}
+        <div className="absolute inset-0 w-full h-full overflow-hidden">
+          <video 
+            autoPlay 
+            loop 
+            muted 
+            playsInline
+            className="w-full h-full object-contain"
+          >
+            <source src="/videos/Get to know the brilliant minds and hands at Onix! _ Onix Engineering Consultancy _ DXB.mp4" type="video/mp4" />
+          </video>
+          <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/80 to-transparent"></div>
         </div>
-        
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-30 w-full pt-8 sm:pt-16 pb-16 sm:pb-20">
-          {/* Content positioned clearly above the planet */}
           <div className="text-center">
-            {/* Header positioned in upper area */}
+            {/* Header */}
             <div className="mb-8 sm:mb-12">
-              <div className="inline-block bg-white/40 backdrop-blur-sm rounded-full px-6 sm:px-8 py-3 mb-6 sm:mb-8 shadow-2xl">
+              <div className="inline-block bg-white/40 backdrop-blur-sm rounded-full px-4 sm:px-6 py-2 sm:py-3 mb-6 sm:mb-8 shadow-2xl">
                 <span className="text-sm sm:text-base font-medium text-white uppercase tracking-wider">Who We Are</span>
               </div>
               <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 sm:mb-8 uppercase tracking-wide drop-shadow-2xl">
@@ -81,7 +82,7 @@ export default function About() {
               <div className="w-24 sm:w-40 h-1 bg-white mx-auto shadow-lg"></div>
             </div>
 
-            {/* Main content positioned above the planet */}
+            {/* Main content */}
             <div className="max-w-6xl mx-auto mb-12 sm:mb-16">
               <p className="text-xl sm:text-2xl md:text-3xl text-white leading-relaxed drop-shadow-2xl font-semibold">
                 With over a decade of experience, Onix Group of Companies delivers innovative solutions.<br />
@@ -90,7 +91,7 @@ export default function About() {
               </p>
             </div>
             
-            {/* Statistics positioned above the planet */}
+            {/* Statistics */}
             <div className="grid grid-cols-2 gap-8 sm:gap-12 md:gap-16 max-w-5xl mx-auto">
               <div className="text-center group">
                 <div className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-3 sm:mb-4 group-hover:text-white/90 transition-colors duration-300 drop-shadow-2xl">
@@ -248,8 +249,17 @@ export default function About() {
 
       {/* Sustainability Section */}
       <section id="sustainability" className="py-12 sm:py-24 relative overflow-hidden min-h-screen flex flex-col justify-start">
-        {/* Construction Background for Sustainability - Full Fit */}
-        <div className="absolute inset-0 w-full h-full bg-gray-900">
+        {/* Video Background for Sustainability Section */}
+        <div className="absolute inset-0 w-full h-full overflow-hidden">
+          <video 
+            autoPlay 
+            loop 
+            muted 
+            playsInline
+            className="w-full h-full object-cover"
+          >
+            <source src="/videos/Discover the art of living in our exquisite villa _ Onix Engineering Consultancy _ DXB.mp4" type="video/mp4" />
+          </video>
           <div className="absolute inset-0 bg-gradient-to-t from-blue-900/70 via-gray-900/70 to-transparent"></div>
         </div>
         

@@ -7,7 +7,14 @@ import { useParams } from 'next/navigation'
 export default function LeaderPage() {
   const [isLoading, setIsLoading] = useState(true)
   const [leader, setLeader] = useState<any>(null)
+  const [currentVideoIndex, setCurrentVideoIndex] = useState(0)
   const params = useParams()
+
+  // Videos for background rotation
+  const backgroundVideos = [
+    '/videos/Get ready for something spectacular! _ Onix Engineering Consultancy _ DXB.mp4',
+    '/videos/Get to know the brilliant minds and hands at Onix! _ Onix Engineering Consultancy _ DXB.mp4'
+  ]
 
   useEffect(() => {
     // Show loading screen for 2 seconds
@@ -17,6 +24,11 @@ export default function LeaderPage() {
 
     return () => clearTimeout(timer)
   }, [])
+
+  // Handle video end to rotate to next video
+  const handleVideoEnd = () => {
+    setCurrentVideoIndex((prevIndex) => (prevIndex + 1) % backgroundVideos.length)
+  }
 
   useEffect(() => {
     // Leader data based on slug
@@ -153,9 +165,26 @@ export default function LeaderPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+    <div className="min-h-screen relative">
+      {/* Video Background */}
+      <div className="absolute inset-0 w-full h-full overflow-hidden">
+        <video
+          key={currentVideoIndex}
+          className="w-full h-full object-cover"
+          autoPlay
+          muted
+          loop={false}
+          playsInline
+          preload="auto"
+          onEnded={handleVideoEnd}
+        >
+          <source src={backgroundVideos[currentVideoIndex]} type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-black/50"></div>
+      </div>
+
       {/* Back Button */}
-      <div className="fixed top-8 left-8 z-50">
+      <div className="fixed top-8 left-8 z-50 relative">
         <Link href="/leaders" className="inline-flex items-center text-white hover:text-blue-400 transition-colors duration-300">
           <svg className="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -165,7 +194,7 @@ export default function LeaderPage() {
       </div>
 
       {/* Onix Logo - Top Center */}
-      <div className="pt-6 pb-6 text-center">
+      <div className="pt-6 pb-6 text-center relative z-20">
         <div className="flex items-center justify-center mb-2">
           <img 
             src="/images/ONIX_LOGO.png" 
@@ -178,7 +207,7 @@ export default function LeaderPage() {
       </div>
 
       {/* Leader Profile */}
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 relative z-20">
         <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 lg:p-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
             {/* Left Side - Photo and Basic Info */}
