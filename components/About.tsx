@@ -270,7 +270,7 @@ export default function About() {
         <div className="absolute inset-0 w-full h-full overflow-hidden">
           <video 
             autoPlay 
-            loop 
+            loop  
             muted 
             playsInline
             className="w-full h-full object-cover"
