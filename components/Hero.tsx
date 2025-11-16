@@ -46,7 +46,7 @@ export default function Hero() {
                   </span>
                   {/* ONIX GROUP Logo */}
                   <Image
-                    src="/images/ONIX GROUP 0002.png"
+                    src="/images/ONIX_GROUP_0002.png"
                     alt="ONIX Logo"
                     width={240}
                     height={240}
@@ -392,7 +392,7 @@ export default function Hero() {
                   <div className="flex items-center justify-between mb-12">
                     <div className="flex items-center space-x-3">
                       <Image
-                        src="/images/ONIX GROUP 0002.png"
+                        src="/images/ONIX_GROUP_0002.png"
                         alt="ONIX GROUP Logo"
                         width={240}
                         height={240}

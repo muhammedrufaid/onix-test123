@@ -86,7 +86,7 @@ export default function CareersPage() {
                   ENGINEERING | CONSTRUCTION | TECHNOLOGY
                 </span>
                 <Image
-                  src="/images/ONIX GROUP 0002.png"
+                  src="/images/ONIX_GROUP_0002.png"
                   alt="ONIX Logo"
                   width={240}
                   height={240}
@@ -336,7 +336,7 @@ export default function CareersPage() {
               <div className="p-8 h-full flex flex-col">
                 <div className="flex items-center justify-between mb-12">
                   <div className="flex items-center space-x-3">
-                    <Image src="/images/ONIX GROUP 0002.png"
+                    <Image src="/images/ONIX_GROUP_0002.png"
                     width={240}
                     height={240}
                     alt="ONIX GROUP Logo" className="h-14 w-auto object-contain" />

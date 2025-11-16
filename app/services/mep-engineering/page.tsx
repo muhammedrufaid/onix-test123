@@ -28,7 +28,7 @@ export default function MEPEngineeringPage() {
           <source src="/videos/ONIX_GROUP_LOADING.mp4" type="video/mp4" />
           <div className="flex items-center justify-center h-full">
             <Image
-              src="/images/ONIX GROUP 0002.png" 
+              src="/images/ONIX_GROUP_0002.png" 
               alt="ONIX GROUP Loading"
                width={240}
               height={240}

@@ -36,7 +36,7 @@ export default function Legacy() {
           {/* Fallback for browsers that don't support video */}
           <div className="flex items-center justify-center h-full">
             <Image
-              src="/images/ONIX GROUP 0002.png"
+              src="/images/ONIX_GROUP_0002.png"
               alt="ONIX GROUP Loading"
               width={240}
               height={240}
@@ -57,7 +57,7 @@ export default function Legacy() {
           className="inline-block hover:opacity-80 transition-opacity duration-300"
         >
           <Image
-            src="/images/ONIX GROUP 0002.png"
+            src="/images/ONIX_GROUP_0002.png"
             alt="ONIX Logo"
             width={240}
             height={240}

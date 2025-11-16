@@ -93,6 +93,8 @@ export default function ExplorePage() {
               <Image 
                 src="/images/ONIX_LOGO.png" 
                 alt="ONIX Logo" 
+                width={64}
+                height={64}
                 className="w-12 h-12 sm:w-16 sm:h-16 object-contain"
               />
               <div className="flex flex-col">
@@ -319,6 +321,8 @@ export default function ExplorePage() {
               <Image 
                 src="/images/ONIX_LOGO.png" 
                 alt="ONIX Logo" 
+                width={48}
+                height={48}
                 className="w-12 h-12 object-contain"
               />
               <div className="flex flex-col">
