@@ -45,14 +45,28 @@ export default function Hero() {
                     ENGINEERING | CONSTRUCTION | TECHNOLOGY
                   </span>
                   {/* ONIX GROUP Logo */}
-                  <Image
-                    src="/images/ONIX_GROUP_0002.png"
-                    alt="ONIX Logo"
-                    width={240}
-                    height={240}
-                    className="w-28 h-28 sm:w-32 sm:h-32 md:w-44 md:h-44 lg:w-52 lg:h-52 object-contain"
-                    priority
-                  />
+                  <picture>
+                    <Image
+                      src="/images/ONIX_GROUP_0002.png"
+                      alt="ONIX Logo"
+                      width={240}
+                      height={240}
+                      className="w-28 h-28 sm:w-32 sm:h-32 md:w-44 md:h-44 lg:w-52 lg:h-52 object-contain"
+                      priority
+                      onError={(e) => {
+                        const img = e.target as HTMLImageElement;
+                        img.style.display = 'none';
+                        const fallback = img.nextElementSibling as HTMLImageElement;
+                        if (fallback) fallback.style.display = 'block';
+                      }}
+                    />
+                    <img
+                      src="https://via.placeholder.com/240x240/000000/FFFFFF?text=ONIX"
+                      alt="ONIX Logo Fallback"
+                      className="w-28 h-28 sm:w-32 sm:h-32 md:w-44 md:h-44 lg:w-52 lg:h-52 object-contain"
+                      style={{ display: 'none' }}
+                    />
+                  </picture>
                 </div>
 
                 {/* Navigation Links - Right side */}
