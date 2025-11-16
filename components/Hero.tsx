@@ -45,7 +45,7 @@ export default function Hero() {
                     ENGINEERING | CONSTRUCTION | TECHNOLOGY
                   </span>
                   {/* ONIX GROUP Logo */}
-                  <Image
+                  <img
                     src="/images/ONIX_GROUP_0002.png"
                     alt="ONIX Logo"
                     width={240}
@@ -391,7 +391,7 @@ export default function Hero() {
                   {/* Glassmorphism Header with Logo */}
                   <div className="flex items-center justify-between mb-12">
                     <div className="flex items-center space-x-3">
-                      <Image
+                      <img
                         src="/images/ONIX_GROUP_0002.png"
                         alt="ONIX GROUP Logo"
                         width={240}
