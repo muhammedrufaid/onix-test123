@@ -52,6 +52,7 @@ export default function Hero() {
                     height={240}
                     className="w-28 h-28 sm:w-32 sm:h-32 md:w-44 md:h-44 lg:w-52 lg:h-52 object-contain"
                     key="onix-logo-colorful"
+                    priority
                   />
                 </div>
 
@@ -397,6 +398,7 @@ export default function Hero() {
                         width={240}
                         height={240}
                         className="h-14 w-auto object-contain"
+                        priority
                       />
                       <div className="flex flex-col">
                         <span className="text-white font-bold text-lg tracking-wide">
